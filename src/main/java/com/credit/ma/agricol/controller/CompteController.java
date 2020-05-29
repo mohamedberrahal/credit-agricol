@@ -2,6 +2,7 @@ package com.credit.ma.agricol.controller;
 
 
 
+import com.credit.ma.agricol.domain.Comptedomain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,12 +20,8 @@ import com.credit.ma.agricol.repository.CompteRepository;
 @RequestMapping("/comptes/")
 public class CompteController {
 
-    private final CompteRepository compteRepository;
-
     @Autowired
-    public CompteController(CompteRepository compteRepository) {
-        this.compteRepository = compteRepository;
-    }
+    private  Comptedomain compteRepository;
 
     @GetMapping("signup")
     public String showSignUpForm(Compte compte) {
